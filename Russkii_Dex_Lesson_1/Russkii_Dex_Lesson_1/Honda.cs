@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Russkii_Dex_Lesson_1
 {
-    public class Nissan : CarInfo
+    public class Honda : CarInfo
     {
         public override void Display()
         {
-            Console.WriteLine($"Информация Nissan \n " +
+            Console.WriteLine($"Информация Honda \n " +
                 $"Количество лошадинных сил = {Hourse} \n " +
                 $"Максимальная скорость = {MaxSpeed} \n " +
                 $"Цена = {Price}");
