@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Dex_Lesson_1
+namespace Dex_Lesson_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+               
         }
     }
 }
