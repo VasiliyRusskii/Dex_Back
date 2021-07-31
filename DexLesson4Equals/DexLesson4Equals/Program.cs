@@ -2,19 +2,6 @@
 
 namespace DexLesson4Equals
 {
-    public class Money
-    {
-        public decimal Amount { get; set; }
-        public string Unit { get; set; }
-
-        public Money(decimal amount, string unit)
-        {
-            Amount = amount;
-            Unit = unit;
-        }
-
-
-    }
     class Program
     {
         static void Main(string[] args)
