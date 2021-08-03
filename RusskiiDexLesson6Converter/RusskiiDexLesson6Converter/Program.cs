@@ -22,10 +22,26 @@ namespace RusskiiDexLesson6Converter
                 double moneyAmountFirst = item.Value.MoneyAmountFirst;
                 double moneyAmountSecond = item.Value.MoneyAmountSecond;
                 string moneyPrefixFirst = item.Value.CurrencyTypeFirst.CurrencyPrefix;
-                string moneyPrefixSecond = item.Value.CurrencyTypeSecond.CurrencyPrefix;
+                string moneyPrefixSecond = null;
                 double moneyInDollars = item.Value.CalculateInDollars();
 
-                Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst} {moneyAmountSecond} {moneyPrefixSecond}  ({moneyInDollars } $)");
+                if (item.Value.CurrencyTypeSecond.CurrencyPrefix == null)
+                {
+                    moneyPrefixSecond = null;
+                }
+                else
+                {
+                    moneyPrefixSecond = item.Value.CurrencyTypeSecond.CurrencyPrefix;
+                }
+
+                if (moneyPrefixSecond != " ")
+                {
+                    Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst} ({moneyInDollars } $) {moneyAmountSecond} {moneyPrefixSecond}  ({moneyInDollars } $)");
+                }
+                else
+                    Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst}   ({moneyInDollars } $)");
+
+                
             }
 
             double res = ConvertMoney(1000, new MDL(), new RUB());

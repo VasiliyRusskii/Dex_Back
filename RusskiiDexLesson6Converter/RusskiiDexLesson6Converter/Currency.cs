@@ -9,5 +9,6 @@ namespace RusskiiDexLesson6Converter
         public virtual double Rate { get; set; }
 
         public virtual string CurrencyPrefix { get; set; }
+
     }
 }
