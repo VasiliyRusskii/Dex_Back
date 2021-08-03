@@ -13,6 +13,8 @@ namespace RusskiiDexLesson6Converter
         public Currency CurrencyTypeSecond { get; set; }
         public double MoneyAmountSecond { get; set; }
 
+        
+
         public Account(Currency currencyTypeFirst, double moneyAmountFirst, Currency currencyTypeSecond, double moneyAmountSecond) : this(currencyTypeFirst, moneyAmountFirst)
         {
             CurrencyTypeSecond = currencyTypeSecond;
@@ -25,12 +27,18 @@ namespace RusskiiDexLesson6Converter
             MoneyAmountFirst = moneyAmountFirst;
         }
 
-        public double CalculateInDollars()
+        public double CalculateInDollarsFirst()
         {
-            if (MoneyAmountSecond != 0)
-                return MoneyAmountSecond / CurrencyTypeSecond.Rate;
-
             return MoneyAmountFirst / CurrencyTypeFirst.Rate;
+        }
+        
+        public double CalculateInDollarsSecond()
+        {
+            if (MoneyAmountSecond == 0)
+            {
+                return 0;
+            }
+            return MoneyAmountSecond / CurrencyTypeSecond.Rate;
         }
     }
 }
