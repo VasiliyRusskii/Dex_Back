@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RusskiiDexLesson6Converter", "RusskiiDexLesson6Converter\RusskiiDexLesson6Converter.csproj", "{F4840E36-0711-47CF-95E4-4ABD8135E352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4840E36-0711-47CF-95E4-4ABD8135E352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4840E36-0711-47CF-95E4-4ABD8135E352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4840E36-0711-47CF-95E4-4ABD8135E352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4840E36-0711-47CF-95E4-4ABD8135E352}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADCA7014-E3AC-4471-9844-E1C0A7B0B4F4}
+	EndGlobalSection
+EndGlobal
