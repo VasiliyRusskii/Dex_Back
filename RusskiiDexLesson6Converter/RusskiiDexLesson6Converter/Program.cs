@@ -7,6 +7,7 @@ namespace RusskiiDexLesson6Converter
     {
         static void Main(string[] args)
         {
+
             var userData = new Dictionary<Client, Account>() {
 
                 { new Client() { Name = "Ivan", Id = 1}, new Account( currencyTypeFirst: new MDL(), moneyAmountFirst: 1000,  currencyTypeSecond: new RUB(), moneyAmountSecond: 965)},
@@ -23,9 +24,10 @@ namespace RusskiiDexLesson6Converter
                 double moneyAmountSecond = item.Value.MoneyAmountSecond;
                 string moneyPrefixFirst = item.Value.CurrencyTypeFirst.CurrencyPrefix;
                 string moneyPrefixSecond = null;
-                double moneyInDollars = item.Value.CalculateInDollars();
+                double moneyInDollarsFirst = item.Value.CalculateInDollars();
+                double moneyInDollarsSecond = item.Value.CalculateInDollars();
 
-                if (item.Value.CurrencyTypeSecond.CurrencyPrefix == null)
+                if (item.Value.CurrencyTypeSecond == null)
                 {
                     moneyPrefixSecond = null;
                 }
@@ -34,12 +36,12 @@ namespace RusskiiDexLesson6Converter
                     moneyPrefixSecond = item.Value.CurrencyTypeSecond.CurrencyPrefix;
                 }
 
-                if (moneyPrefixSecond != " ")
+                if (moneyPrefixSecond != null)
                 {
-                    Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst} ({moneyInDollars } $) {moneyAmountSecond} {moneyPrefixSecond}  ({moneyInDollars } $)");
+                    Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst} ({moneyInDollarsFirst } $) {moneyAmountSecond} {moneyPrefixSecond}  ({moneyInDollarsSecond } $)");
                 }
                 else
-                    Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst}   ({moneyInDollars } $)");
+                    Console.WriteLine($"{UserName} ({UserId}) - {moneyAmountFirst} {moneyPrefixFirst}   ({moneyInDollarsFirst } $)");
 
                 
             }

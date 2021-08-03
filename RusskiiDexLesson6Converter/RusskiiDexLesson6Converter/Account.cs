@@ -28,9 +28,7 @@ namespace RusskiiDexLesson6Converter
         public double CalculateInDollars()
         {
             if (MoneyAmountSecond != 0)
-            {
                 return MoneyAmountSecond / CurrencyTypeSecond.Rate;
-            }
 
             return MoneyAmountFirst / CurrencyTypeFirst.Rate;
         }
